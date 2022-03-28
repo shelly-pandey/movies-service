@@ -1,0 +1,97 @@
+######################################################################
+//for  users
+###
+POST http://localhost:5000/api/v1/users/user HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "brock11@gmail.com",
+  "firstName": "brock11",
+  "lastName" : "lesner11",
+  "username": "iambrock11",
+  "password": "mission11@009",
+  "address" : "somewhere11"
+
+}
+
+###
+POST http://localhost:5000/api/v1/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+   "email": "john53@gmail.com",
+  "password": "missionaccomplished@009"
+}
+
+###
+PATCH http://localhost:5000/api/v1/users/62278133b1e61a49bc63edec/product/62277da1d2b3a856fca8ce03
+
+###
+DELETE http://localhost:5000/api/v1/users/622a245006cc0d3774d9adfa
+
+###
+GET http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+###
+GET http://localhost:5000/api/v1/users/622a233fe9557f16902cda96
+
+###
+PUT http://localhost:5000/api/v1/users/622a233fe9557f16902cda96
+Content-Type: application/json
+
+{
+    "isBanned": false,
+	"isAdmin": false
+}
+
+###
+
+
+
+######################################################################
+//for movies
+###
+POST http://localhost:5000/api/v1/movies/movie HTTP/1.1
+Content-Type: application/json
+
+{
+	"id": 1,
+	"title": "The Batman",
+	"year": "2022",
+	"genres": ["Action", "Crime", "Drama"],
+	"director": "Matt Reeves",
+	"stars": {
+		"rate": 8.4,
+		"count": 284000
+	},
+	"description": "When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+	"image": "https://www.heavenofhorror.dk/wp-content/uploads/2022/03/the-batman-2022-anmeldelse.jpg"
+}
+
+###
+DELETE http://localhost:5000/api/v1/movies/621f522c3027f23cf2d4aea3
+
+###
+GET http://localhost:5000/api/v1/movies
+#Access-Control-Allow-Origin: *
+
+###
+GET http://localhost:5000/api/v1/movies/62277ff5ec31a918dc93efb9
+
+###
+PUT http://localhost:5000/api/v1/movies/62277ff5ec31a918dc93efb9
+Content-Type: application/json
+
+{
+	"title": "Mens Cotton Shirt",
+	"price": 55.99,
+	"description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+	"category": "men's clothing",
+	"image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+	"rating": {
+		"rate": 4,
+		"count": 500
+	}
+}
+

@@ -10,6 +10,7 @@ export type MovieDocument = Document & {
   stars: { rate: number; count: number }
   description: string
   image: string
+  funfacts: string
 }
 
 const movieSchema = new mongoose.Schema({
@@ -20,7 +21,8 @@ const movieSchema = new mongoose.Schema({
   director: String,
   stars: { rate: Number, count: Number },
   description: String,
-  image: String
+  image: String,
+  funfacts: String,
 })
 
 export default mongoose.model<MovieDocument>('Movie', movieSchema)
